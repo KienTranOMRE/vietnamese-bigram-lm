@@ -1,0 +1,66 @@
+============================================================
+VIETNAMESE SYLLABLE-LEVEL BIGRAM LANGUAGE MODEL
+============================================================
+Đã tải 5000 bài viết, tổng 50,868,835 ký tự.
+Số câu sau tiền xử lý: 534,837
+Ví dụ câu đã tokenize: ['<s>', 'internet', 'society', 'hay', 'isoc', 'là', 'một', 'tổ', 'chức', 'quốc', 'tế', 'hoạt', 'động', 'phi', 'lợi', 'nhuận', 'phi', 'chính', 'phủ', 'và', 'bao', 'gồm', 'các', 'thành', 'viên', 'có', 'trình', 'độ', 'chuyên', 'ngành', '</s>']
+
+Số bigram khác nhau: 1,587,615
+Số unigram khác nhau: 131,138
+
+--- Top 20 Bigram (theo tần suất) ---
+  P(nam          | việt        ) = 24676/34113 = 0.7234
+  P(thể          | có          ) = 22561/110993 = 0.2033
+  P(một          | là          ) = 19134/143013 = 0.1338
+  P(các          | <s>         ) = 18209/534837 = 0.0340
+  P(trong        | <s>         ) = 14768/534837 = 0.0276
+  P(dụng         | sử          ) = 13842/24419 = 0.5669
+  P(số           | một         ) = 12077/106466 = 0.1134
+  P(gia          | quốc        ) = 10976/46320 = 0.2370
+  P(phố          | thành       ) = 10855/55550 = 0.1954
+  P(là           | gọi         ) =  9894/15791 = 0.6266
+  P(giới         | thế         ) =  9612/29464 = 0.3262
+  P(triển        | phát        ) =  9416/21858 = 0.4308
+  P(tiên         | đầu         ) =  9178/32033 = 0.2865
+  P(năm          | <s>         ) =  9167/534837 = 0.0171
+  P(các          | của         ) =  8998/162602 = 0.0553
+  P(quốc         | trung       ) =  8822/32081 = 0.2750
+  P(một          | <s>         ) =  8770/534837 = 0.0164
+  P(năm          | vào         ) =  8448/44602 = 0.1894
+  P(</s>         | nam         ) =  7740/47021 = 0.1646
+  P(chức         | tổ          ) =  7472/10933 = 0.6834
+
+--- Xác suất câu (MLE): "Hôm nay trời đẹp lắm" ---
+  P(hôm        | <s>       ) = 0.000118
+  P(nay        | hôm       ) = 0.212991
+  P(trời       | nay       ) = 0.000196
+  P(đẹp        | trời      ) = 0.000389
+  P(lắm        | đẹp       ) = 0.000000
+  P(</s>       | lắm       ) = 0.246575
+
+  P("Hôm nay trời đẹp lắm") = 0.0000000000e+00
+  Log2 P = -inf
+
+--- Xác suất câu (Laplace smoothing, V=131,138): "Hôm nay trời đẹp lắm" ---
+  P(hôm        | <s>       ) = 0.000096
+  P(nay        | hôm       ) = 0.001077
+  P(trời       | nay       ) = 0.000021
+  P(đẹp        | trời      ) = 0.000022
+  P(lắm        | đẹp       ) = 0.000008
+  P(</s>       | lắm       ) = 0.000419
+
+  P("Hôm nay trời đẹp lắm") = 1.5294070909e-25
+  Log2 P = -82.4352
+
+--- So sánh xác suất (Laplace smoothing) ---
+  "Hôm nay trời đẹp lắm":  P = 1.529407e-25,  Log2 P = -82.4352
+  "Việt Nam là một quốc gia":  P = 7.672697e-14,  Log2 P = -43.5673
+
+--- Sinh câu từ mô hình bigram ---
+  [1] pháp
+  [2] ảnh hưởng nghiêm là trứng kiến thức của một loại chính sách chuyển động vật chính yếu tố giống các
+  [3] tên gọi thổ được sự kết có trách chức quản lý câu cá thể đồng mỹ sơn gồm viện đại
+  [4] những cải tiến hành chính thức đi đánh chiếm được coi giao việt nam và bách khoa học cro3
+  [5] mô phỏng sinh chính thức của mình trở thành thuật mạnh mẽ và kết n trong các công nhân dân
+
+============================================================
